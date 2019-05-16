@@ -35,6 +35,9 @@
     <sprite>sprites\spr_sellButton</sprite>
     <sprite>sprites\spr_saleTerm</sprite>
     <sprite>sprites\spr_MoneyUI</sprite>
+    <sprite>sprites\spr_oxygen</sprite>
+    <sprite>sprites\spr_oxygenTerminal</sprite>
+    <sprite>sprites\spr_buyButton</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sand</background>
@@ -49,9 +52,9 @@
     <font>fonts\fnt_menu</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_control</object>
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
+    <object>objects\obj_control</object>
     <object>objects\obj_toolbarOutline</object>
     <object>objects\obj_placementghost</object>
     <object>objects\obj_drill</object>
@@ -72,6 +75,10 @@
     <object>objects\obj_sellVal</object>
     <object>objects\obj_sellFuel</object>
     <object>objects\obj_empireController</object>
+    <object>objects\obj_oxygenControl</object>
+    <object>objects\obj_oxygenTerminal</object>
+    <object>objects\obj_oxygenTerminalMenu</object>
+    <object>objects\obj_buyOxygen</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_menu</room>

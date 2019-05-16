@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_player" x="640" y="448" name="inst_FC564F81" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_control" x="288" y="192" name="inst_FE9D9DC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_placementghost" x="256" y="352" name="inst_89BB12EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mineralNode" x="704" y="608" name="inst_B3E26B92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mineralNode" x="1088" y="480" name="inst_23F64C58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -62,7 +63,7 @@
     <instance objName="obj_sellMin" x="-448" y="288" name="inst_422B653B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sellVal" x="-448" y="384" name="inst_9FD471C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sellFuel" x="-480" y="512" name="inst_B6DF31EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_control" x="32" y="32" name="inst_7C8DC3EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_oxygenControl" x="96" y="224" name="inst_46988BC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

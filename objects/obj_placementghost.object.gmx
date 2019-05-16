@@ -78,6 +78,11 @@ currentGhost = spr_SaleTerminal;
 currentPrice = "";
 }
 
+if global.CurrentSlot == 4
+{
+    currentGhost = spr_oxygenTerminal;
+    currentPrice = "";
+}
 </string>
           </argument>
         </arguments>
@@ -112,6 +117,10 @@ if place_free(mouse_x, mouse_y) &amp;&amp; !place_meeting(mouse_x, mouse_y, obj_
 
 if place_free(mouse_x, mouse_y) &amp;&amp; !place_meeting(mouse_x, mouse_y, obj_player) &amp;&amp; global.CurrentSlot == 3 &amp;&amp; !instance_exists(obj_saleTerminal){
     instance_create(mouse_x, mouse_y, obj_saleTerminal)
+}
+
+if place_free(mouse_x, mouse_y) &amp;&amp; !place_meeting(mouse_x, mouse_y, obj_player) &amp;&amp; global.CurrentSlot == 4 &amp;&amp; !instance_exists(obj_oxygenTerminal){
+    instance_create(mouse_x, mouse_y, obj_oxygenTerminal)
 }
 </string>
           </argument>
