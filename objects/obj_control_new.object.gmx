@@ -26,8 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///variables
-alarm[0] = 60
-global.currentEmpire = obj_empire1Controller;
+alarm[0] = 60;
 xpos = window_get_width();
 ypos = window_get_height();
 OutlinePositionX = xpos/2-258;
@@ -37,19 +36,11 @@ global.mineralCount = 0;
 global.valuableCount = 0;
 global.fuelCount = 0;
 global.moneyCount = 10;
-global.mineralPrice = global.currentEmpire.minPrice;
-global.valuablePrice = global.currentEmpire.valPrice;
-global.fuelPrice = global.currentEmpire.fuelPrice;
-global.drillPrice = 10;
-global.storagePrice = 2000;
-global.mineralOriginalPrice = 5;
-global.valuableOriginalPrice = 100;
-global.fuelOriginalPrice = 20;
-global.oxygen = 100;
-global.oxygenPrice = 10;
+global.mineralPrice = 5;
+global.valuablePrice = 100;
+global.fuelPrice = 20;
 global.cycleTimer = 10;
 global.upkeepTotal = 0;
-randomize();
 </string>
           </argument>
         </arguments>
@@ -102,28 +93,6 @@ if global.cycleTimer &lt; 0{
 global.moneyCount -= global.upkeepTotal;
 global.cycleTimer = 240;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///round camera values
-
 </string>
           </argument>
         </arguments>
@@ -203,7 +172,6 @@ draw_sprite(spr_toolbaroutline, 0, OutlinePositionX, OutlinePositionY)
 draw_sprite(spr_drillIcon, 0, xpos/2-211, ypos-40)
 draw_sprite(spr_storage, 0, xpos/2-164, ypos-40)
 draw_sprite(spr_saleTerm, 0, xpos/2-117, ypos-40)
-draw_sprite(spr_oxygenTerminal, 0, xpos/2-70, ypos-40)
 draw_sprite(spr_UiBoks, 0, 0, 10)
 draw_sprite(spr_UiBoks, 0, 196, 10)
 draw_sprite(spr_UiBoks, 0, 392, 10)
@@ -212,14 +180,12 @@ draw_sprite(spr_mineralUI, 0, 20, 20)
 draw_sprite(spr_fuelUI, 0, 216, 20)
 draw_sprite(spr_valuableUI, 0, 412, 20)
 draw_sprite(spr_MoneyUI, 0, 608, 20)
-draw_sprite(spr_oxygen, 0, 812, 20)
+draw_text(800, 20, global.cycleTimer)
+draw_text(900, 20, global.upkeepTotal)
 draw_text(54, 20, global.mineralCount)
 draw_text(250, 20, global.fuelCount)
 draw_text(446, 20, global.valuableCount)
 draw_text(642, 20, global.moneyCount)
-draw_text(850, 20, global.oxygen)
-draw_text(1050, 20, global.cycleTimer)
-draw_text(1100, 20, global.upkeepTotal)
 </string>
           </argument>
         </arguments>

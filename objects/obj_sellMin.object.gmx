@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>moneyToGet = 0;
+currentEmp = obj_empire1Controller;
 </string>
           </argument>
         </arguments>
@@ -85,6 +86,11 @@ global.mineralCount = 0;
 if moneyToGet &gt; 0 {
 if global.mineralPrice &gt;= global.mineralOriginalPrice * 0.5{
 global.mineralPrice -=1
+global.currentEmpire.affinity += 1
+}
+
+if currentEmp.affinity &gt; 100{
+currentEmp.affinity += 1;
 }
 
 if global.valuablePrice &lt;= global.valuableOriginalPrice * 1.2{

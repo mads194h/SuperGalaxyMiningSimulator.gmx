@@ -38,6 +38,7 @@
     <sprite>sprites\spr_oxygen</sprite>
     <sprite>sprites\spr_oxygenTerminal</sprite>
     <sprite>sprites\spr_buyButton</sprite>
+    <sprite>sprites\spr_empireSelector</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sand</background>
@@ -79,6 +80,10 @@
     <object>objects\obj_oxygenTerminal</object>
     <object>objects\obj_oxygenTerminalMenu</object>
     <object>objects\obj_buyOxygen</object>
+    <object>objects\obj_empire1Controller</object>
+    <object>objects\obj_empire2Controller</object>
+    <object>objects\obj_empire3Controller</object>
+    <object>objects\obj_empireSelector</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_menu</room>

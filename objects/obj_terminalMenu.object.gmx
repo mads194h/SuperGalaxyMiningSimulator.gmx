@@ -61,6 +61,7 @@ draw_text_transformed(self.x-93, self.y-70, global.fuelCount, 0.25, 0.25, 0)
 draw_text_transformed(self.x+10, self.y-142, global.mineralPrice, 0.25, 0.25, 0)
 draw_text_transformed(self.x+10, self.y-106, global.valuablePrice, 0.25, 0.25, 0)
 draw_text_transformed(self.x+10, self.y-70, global.fuelPrice, 0.25, 0.25, 0)
+draw_text_transformed(self.x-43, self.y-39, global.currentEmpire.empireName, 0.25, 0.25, 0)
 </string>
           </argument>
         </arguments>
