@@ -29,7 +29,7 @@
 {
     case 0:
     {
-        string("No Event");
+        string(global.eventString = string("No Event"));
         global.mineralPirce = 5;
         global.valuablePrice = 100;
         global.fuelPrice = 20;
@@ -37,20 +37,20 @@
     }
     case 1:
     {
-        string("Empire wants to expand... minerals sell for more");
+        string(global.evenString = string("Empire wants to expand... minerals sell for more"));
         global.mineralPrice = 8;
         break;
     }
     case 2:
     {
-        string("1 empire is in war with another... minerals and fuel sell for more")
+        string(global.eventString = string("1 empire is in war with another... minerals and fuel sell for more"));
         global.mineralPrice = 8;
         global.fuelPrice = 23;
         break;
     }
     case 3:
     {
-        string("1 empire is mad at you for selling to another empire... minerals, valuable and fuel sell for less")
+        string(global.eventString = string("1 empire is mad at you for selling to another empire... minerals, valuable and fuel sell for less"));
         global.mineralPrice = 2;
         global.valuablePrice = 60;
         global.fuelPrice = 15;
@@ -58,7 +58,7 @@
     }
     case 4:
     {
-        string("1 empire enters a golden age... valuable sell for more")
+        string(global.eventString = string("1 empire enters a golden age... valuable sell for more"));
         global.valuvblePrice = 140;
         break;
     }

@@ -75,8 +75,8 @@ instance_destroy(self)
             <kind>1</kind>
             <string>draw_self();
 draw_sprite(spr_event, 0, self.x-108, self.y-142)
-draw_text_transformed(self.x-93, self.y-142, global.oxygen, 0.25, 0.25, 0)
-draw_text_transformed(self.x+10, self.y-142, global.oxygenPrice, 0.25, 0.25, 0)
+draw_text_transformed(self.x-93, self.y-142, global.eventString, 0.25, 0.25, 0)
+draw_text_transformed(self.x+10, self.y-142, global.eventString, 0.25, 0.25, 0)
 </string>
           </argument>
         </arguments>

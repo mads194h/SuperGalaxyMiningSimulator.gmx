@@ -45,6 +45,7 @@ global.valuableOriginalPrice = 100;
 global.fuelOriginalPrice = 20;
 global.oxygen = 100;
 global.oxygenPrice = 10;
+string(global.eventString = "hello");
 randomize();
 </string>
           </argument>
