@@ -49,7 +49,7 @@ global.oxygen = 100;
 global.oxygenPrice = 10;
 global.cycleTimer = 10;
 global.upkeepTotal = 0;
-global.eventString = "Test";
+global.eventString = "";
 randomize();
 </string>
           </argument>
@@ -99,10 +99,26 @@ alarm[0] = 60;
           <argument>
             <kind>1</kind>
             <string>///cycle end
-if global.cycleTimer &lt; 0{
+if global.cycleTimer &lt;= 0{
+randomize();
 global.moneyCount -= global.upkeepTotal;
 //event code start
-eventSelect = random_range(1, 5);
+eventSelect = irandom_range(1, 5);
+empireSelect = irandom_range(1,3);
+eventEmpire = empire1Controller;
+
+if (empireSelect == 1)
+{
+    evenEmpire = empire1Controller;
+}
+if (empireSelect == 2)
+{
+    eventEmpire = empire2Controller;
+}
+if (empireSelect == 3)
+{
+    eventEmpire = empire3Controller;
+}
 
 if (eventSelect == 1)
 {
@@ -114,7 +130,8 @@ if (eventSelect == 1)
 if (eventSelect == 2)
 {
     global.eventString = "Empire wants to expand... minerals sell for more";
-    global.mineralPrice = 8;
+    eventEmpire.minPrice = 8;
+    global.mineralPrice = obj_empire1Controller.minPrice;
 }
 if (eventSelect == 3)
 {
