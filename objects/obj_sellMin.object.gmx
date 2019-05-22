@@ -84,13 +84,11 @@ y = -200
 global.moneyCount += moneyToGet;
 global.mineralCount = 0;
 if moneyToGet &gt; 0 {
-if global.mineralPrice &gt;= global.mineralOriginalPrice * 0.5{
-global.mineralPrice -=1
-global.currentEmpire.affinity += 1
-}
-
+if global.currentEmpire.minPrice &gt;= global.mineralOriginalPrice * 0.5{
 if currentEmp.affinity &gt; 100{
 currentEmp.affinity += 1;
+}
+global.currentEmpire.minPrice -=1
 }
 
 if global.valuablePrice &lt;= global.valuableOriginalPrice * 1.2{
