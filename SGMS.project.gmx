@@ -39,6 +39,10 @@
     <sprite>sprites\spr_oxygenTerminal</sprite>
     <sprite>sprites\spr_buyButton</sprite>
     <sprite>sprites\spr_empireSelector</sprite>
+    <sprite>sprites\sprite32</sprite>
+    <sprite>sprites\spr_eventTower</sprite>
+    <sprite>sprites\spr_eventTowerMenu</sprite>
+    <sprite>sprites\spr_event</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sand</background>
@@ -84,6 +88,12 @@
     <object>objects\obj_empire2Controller</object>
     <object>objects\obj_empire3Controller</object>
     <object>objects\obj_empireSelector</object>
+    <objects name="Events">
+      <object>objects\obj_eventController</object>
+      <object>objects\obj_events</object>
+      <object>objects\obj_eventTower</object>
+      <object>objects\obj_eventMenu</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_menu</room>

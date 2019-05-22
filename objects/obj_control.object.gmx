@@ -49,6 +49,7 @@ global.oxygen = 100;
 global.oxygenPrice = 10;
 global.cycleTimer = 10;
 global.upkeepTotal = 0;
+global.eventString = "";
 randomize();
 </string>
           </argument>
