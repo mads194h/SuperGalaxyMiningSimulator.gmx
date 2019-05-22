@@ -91,12 +91,12 @@ currentEmp.affinity += 1;
 global.currentEmpire.minPrice -=1
 }
 
-if global.valuablePrice &lt;= global.valuableOriginalPrice * 1.2{
-global.valuablePrice += 2
+if global.currentEmpire.valPrice &lt;= global.valuableOriginalPrice * 1.2{
+global.currentEmpire.valPrice += 2
 }
 
-if global.fuelPrice &lt;= global.fuelOriginalPrice * 1.2{
-global.fuelPrice += 2
+if global.currentEmpire.fuelPrice &lt;= global.fuelOriginalPrice * 1.2{
+global.currentEmpire.fuelPrice += 2
 }
 }
 </string>

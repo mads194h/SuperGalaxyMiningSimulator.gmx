@@ -83,15 +83,15 @@ y = -200
 global.moneyCount += moneyToGet;
 global.fuelCount = 0;
 if moneyToGet &gt; 0 {
-if global.fuelPrice &gt;= global.fuelOriginalPrice * 0.5{
-global.fuelPrice -=1
+if global.currentEmpire.fuelPrice &gt;= global.fuelOriginalPrice * 0.5{
+global.currentEmpire.fuelPrice -=1
 global.currentEmpire.affinity += 1
 }
-if global.valuablePrice &lt;= global.valuableOriginalPrice * 1.2{
-global.valuablePrice += 2
+if global.currentEmpire.valPrice &lt;= global.valuableOriginalPrice * 1.2{
+global.currentEmpire.valPrice += 2
 }
-if global.mineralPrice &lt;= global.mineralOriginalPrice * 1.2{
-global.mineralPrice += 1
+if global.currentEmpire.minPrice &lt;= global.mineralOriginalPrice * 1.2{
+global.currentEmpire.minPrice += 1
 }
 }
 </string>
