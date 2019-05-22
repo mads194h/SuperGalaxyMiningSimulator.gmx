@@ -105,19 +105,23 @@ global.moneyCount -= global.upkeepTotal;
 //event code start
 eventSelect = irandom_range(1, 5);
 empireSelect = irandom_range(1,3);
-eventEmpire = empire1Controller;
+eventEmpire = obj_empire1Controller;
+empireName = "";
 
 if (empireSelect == 1)
 {
-    evenEmpire = empire1Controller;
+    eventEmpire = obj_empire1Controller;
+    empireName = "Danmark";
 }
 if (empireSelect == 2)
 {
-    eventEmpire = empire2Controller;
+    eventEmpire = obj_empire2Controller;
+    empireName = "Fyn";
 }
 if (empireSelect == 3)
 {
-    eventEmpire = empire3Controller;
+    eventEmpire = obj_empire3Controller;
+    empireName = "Jylland";
 }
 
 if (eventSelect == 1)
@@ -129,26 +133,26 @@ if (eventSelect == 1)
 }
 if (eventSelect == 2)
 {
-    global.eventString = "Empire wants to expand... minerals sell for more";
+    global.eventString = empireName + " wants to expand... minerals sell for more";
     eventEmpire.minPrice = 8;
     global.mineralPrice = obj_empire1Controller.minPrice;
 }
 if (eventSelect == 3)
 {
-    global.eventString = "1 empire is in war with another... minerals and fuel sell for more";
+    global.eventString = empireName + " is in war with another empire... minerals and fuel sell for more";
     global.mineralPrice = 8;
     global.fuelPrice = 23;
 }
 if (eventSelect == 4)
 {
-    global.eventString = "1 empire is mad at you for selling to another empire... minerals, valuable and fuel sell for less";
+    global.eventString = empireName + " is mad at you for selling to another empire... minerals, valuable and fuel sell for less";
     global.mineralPrice = 2;
     global.valuablePrice = 60;
     global.fuelPrice = 15;
 }
 if (eventSelect == 5)
 {
-    global.eventString = "1 empire enters a golden age... valuable sell for more";
+    global.eventString = empireName + " enters a golden age... valuable sell for more";
     global.valuablePrice = 140;
 }
 //event code end 
