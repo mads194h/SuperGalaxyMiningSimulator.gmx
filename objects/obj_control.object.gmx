@@ -127,35 +127,34 @@ if (empireSelect == 3)
 if (eventSelect == 1)
 {
     global.eventString = "No Event";
-    global.mineralPrice = 5;
-    global.valuablePrice = 100;
-    global.fuelPrice = 20;
+    eventEmpire.minPrice = 5;
+    eventEmpire.valPrice = 100;
+    eventEmpire.fuelPrice = 20;
 }
 if (eventSelect == 2)
 {
     global.eventString = empireName + " wants to expand... minerals sell for more";
     eventEmpire.minPrice = 8;
-    global.mineralPrice = obj_empire1Controller.minPrice;
 }
 if (eventSelect == 3)
 {
-    global.eventString = empireName + " is in war with another empire... minerals and fuel sell for more";
-    global.mineralPrice = 8;
-    global.fuelPrice = 23;
+    global.eventString = empireName + " is in war with another... minerals and fuel sell for more";
+    eventEmpire.minPrice = 8;
+    eventEmpire.fuelPrice = 23;
 }
 if (eventSelect == 4)
 {
     global.eventString = empireName + " is mad at you for selling to another empire... minerals, valuable and fuel sell for less";
-    global.mineralPrice = 2;
-    global.valuablePrice = 60;
-    global.fuelPrice = 15;
+    eventEmpire.minPrice = 2;
+    eventEmpire.valPrice = 60;
+    eventEmpire.fuelPrice = 15;
 }
 if (eventSelect == 5)
 {
     global.eventString = empireName + " enters a golden age... valuable sell for more";
-    global.valuablePrice = 140;
+    eventEmpire.valPrice = 140;
 }
-//event code end 
+//event code end
 global.cycleTimer = 240;
 }
 </string>
