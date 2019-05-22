@@ -27,9 +27,9 @@
             <kind>1</kind>
             <string>if point_distance(obj_eventTower.x, obj_eventTower.y, obj_player.x, obj_player.y) &lt; 150
 {
-    if !instance_exists(obj_eventMenu)
+    if !instance_exists(obj_eventTowerMenu)
     {
-        instance_create(self.x, self.y-52, obj_eventMenu)
+        instance_create(self.x, self.y-52, obj_eventTowerMenu)
     }
 }
 </string>

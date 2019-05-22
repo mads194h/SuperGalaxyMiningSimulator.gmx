@@ -17,8 +17,8 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>100</width>
-  <height>20</height>
+  <width>200</width>
+  <height>40</height>
   <frames>
     <frame index="0">images\spr_UiBoks_0.png</frame>
   </frames>

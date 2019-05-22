@@ -49,7 +49,7 @@ global.oxygen = 100;
 global.oxygenPrice = 10;
 global.cycleTimer = 10;
 global.upkeepTotal = 0;
-global.eventString = "";
+global.eventString = "Test";
 randomize();
 </string>
           </argument>
@@ -101,6 +101,40 @@ alarm[0] = 60;
             <string>///cycle end
 if global.cycleTimer &lt; 0{
 global.moneyCount -= global.upkeepTotal;
+//event code start
+eventSelect = random_range(1, 5);
+
+if (eventSelect == 1)
+{
+    global.eventString = "No Event";
+    global.mineralPrice = 5;
+    global.valuablePrice = 100;
+    global.fuelPrice = 20;
+}
+if (eventSelect == 2)
+{
+    global.eventString = "Empire wants to expand... minerals sell for more";
+    global.mineralPrice = 8;
+}
+if (eventSelect == 3)
+{
+    global.eventString = "1 empire is in war with another... minerals and fuel sell for more";
+    global.mineralPrice = 8;
+    global.fuelPrice = 23;
+}
+if (eventSelect == 4)
+{
+    global.eventString = "1 empire is mad at you for selling to another empire... minerals, valuable and fuel sell for less";
+    global.mineralPrice = 2;
+    global.valuablePrice = 60;
+    global.fuelPrice = 15;
+}
+if (eventSelect == 5)
+{
+    global.eventString = "1 empire enters a golden age... valuable sell for more";
+    global.valuablePrice = 140;
+}
+//event code end 
 global.cycleTimer = 240;
 }
 </string>
@@ -205,6 +239,7 @@ draw_sprite(spr_drillIcon, 0, xpos/2-211, ypos-40)
 draw_sprite(spr_storage, 0, xpos/2-164, ypos-40)
 draw_sprite(spr_saleTerm, 0, xpos/2-117, ypos-40)
 draw_sprite(spr_oxygenTerminal, 0, xpos/2-70, ypos-40)
+draw_sprite(spr_eventTower, 0, xpos/2-22, ypos-40)
 draw_sprite(spr_UiBoks, 0, 0, 10)
 draw_sprite(spr_UiBoks, 0, 196, 10)
 draw_sprite(spr_UiBoks, 0, 392, 10)

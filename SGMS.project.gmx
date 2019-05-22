@@ -9,40 +9,54 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_blank</sprite>
     <sprite>sprites\spr_wall</sprite>
-    <sprite>sprites\spr_toolbar</sprite>
-    <sprite>sprites\spr_toolbaroutline</sprite>
-    <sprite>sprites\spr_drillIcon</sprite>
-    <sprite>sprites\spr_drill</sprite>
-    <sprite>sprites\spr_drill_ghost</sprite>
-    <sprite>sprites\spr_mineral</sprite>
-    <sprite>sprites\spr_mineralUI</sprite>
-    <sprite>sprites\spr_mineralNode</sprite>
-    <sprite>sprites\spr_drillShade</sprite>
-    <sprite>sprites\spr_fuelNode</sprite>
-    <sprite>sprites\spr_valuableNode</sprite>
-    <sprite>sprites\spr_fuel</sprite>
-    <sprite>sprites\spr_fuelUI</sprite>
-    <sprite>sprites\spr_valuable</sprite>
-    <sprite>sprites\spr_valuableUI</sprite>
-    <sprite>sprites\spr_UiBoks</sprite>
-    <sprite>sprites\spr_SaleTerminal</sprite>
-    <sprite>sprites\spr_storage</sprite>
-    <sprite>sprites\spr_storage_ghost</sprite>
-    <sprite>sprites\spr_menuArrow</sprite>
-    <sprite>sprites\spr_1920x1080_button</sprite>
-    <sprite>sprites\spr_1280x720_button</sprite>
-    <sprite>sprites\spr_terminalMenu</sprite>
-    <sprite>sprites\spr_sellButton</sprite>
-    <sprite>sprites\spr_saleTerm</sprite>
-    <sprite>sprites\spr_MoneyUI</sprite>
-    <sprite>sprites\spr_oxygen</sprite>
-    <sprite>sprites\spr_oxygenTerminal</sprite>
-    <sprite>sprites\spr_buyButton</sprite>
-    <sprite>sprites\spr_empireSelector</sprite>
     <sprite>sprites\sprite32</sprite>
-    <sprite>sprites\spr_eventTower</sprite>
-    <sprite>sprites\spr_eventTowerMenu</sprite>
-    <sprite>sprites\spr_event</sprite>
+    <sprites name="Oxygen">
+      <sprite>sprites\spr_oxygenTerminal</sprite>
+      <sprite>sprites\spr_oxygen</sprite>
+    </sprites>
+    <sprites name="Machines">
+      <sprite>sprites\spr_drillIcon</sprite>
+      <sprite>sprites\spr_drill</sprite>
+      <sprite>sprites\spr_drill_ghost</sprite>
+      <sprite>sprites\spr_drillShade</sprite>
+      <sprite>sprites\spr_storage</sprite>
+      <sprite>sprites\spr_storage_ghost</sprite>
+    </sprites>
+    <sprites name="Recourses">
+      <sprite>sprites\spr_mineral</sprite>
+      <sprite>sprites\spr_mineralUI</sprite>
+      <sprite>sprites\spr_mineralNode</sprite>
+      <sprite>sprites\spr_valuableNode</sprite>
+      <sprite>sprites\spr_fuelNode</sprite>
+      <sprite>sprites\spr_fuel</sprite>
+      <sprite>sprites\spr_valuable</sprite>
+      <sprite>sprites\spr_valuableUI</sprite>
+      <sprite>sprites\spr_fuelUI</sprite>
+    </sprites>
+    <sprites name="Sale terminal">
+      <sprite>sprites\spr_SaleTerminal</sprite>
+      <sprite>sprites\spr_empireSelector</sprite>
+      <sprite>sprites\spr_terminalMenu</sprite>
+      <sprite>sprites\spr_saleTerm</sprite>
+    </sprites>
+    <sprites name="UI">
+      <sprite>sprites\spr_UiBoks</sprite>
+      <sprite>sprites\spr_toolbar</sprite>
+      <sprite>sprites\spr_toolbaroutline</sprite>
+      <sprite>sprites\spr_MoneyUI</sprite>
+    </sprites>
+    <sprites name="Event">
+      <sprite>sprites\spr_eventTower</sprite>
+      <sprite>sprites\spr_eventTowerMenu</sprite>
+      <sprite>sprites\spr_event</sprite>
+    </sprites>
+    <sprites name="Main menu">
+      <sprite>sprites\spr_menuArrow</sprite>
+      <sprite>sprites\spr_sellButton</sprite>
+      <sprite>sprites\spr_buyButton</sprite>
+      <sprite>sprites\spr_1280x720_button</sprite>
+      <sprite>sprites\spr_1920x1080_button</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sand</background>
@@ -58,41 +72,50 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
-    <object>objects\obj_wall</object>
     <object>objects\obj_control</object>
     <object>objects\obj_toolbarOutline</object>
     <object>objects\obj_placementghost</object>
-    <object>objects\obj_drill</object>
-    <object>objects\obj_mineral</object>
-    <object>objects\obj_fuel</object>
-    <object>objects\obj_valuable</object>
-    <object>objects\obj_drillShade</object>
-    <object>objects\obj_mineralNode</object>
-    <object>objects\obj_valuableNode</object>
-    <object>objects\obj_fuelNode</object>
     <object>objects\obj_nodeParent</object>
-    <object>objects\obj_saleTerminal</object>
-    <object>objects\obj_storage</object>
-    <object>objects\obj_mainMenu</object>
-    <object>objects\obj_optionsController</object>
-    <object>objects\obj_terminalMenu</object>
-    <object>objects\obj_sellMin</object>
-    <object>objects\obj_sellVal</object>
-    <object>objects\obj_sellFuel</object>
-    <object>objects\obj_empireController</object>
-    <object>objects\obj_oxygenControl</object>
-    <object>objects\obj_oxygenTerminal</object>
-    <object>objects\obj_oxygenTerminalMenu</object>
-    <object>objects\obj_buyOxygen</object>
-    <object>objects\obj_empire1Controller</object>
-    <object>objects\obj_empire2Controller</object>
-    <object>objects\obj_empire3Controller</object>
-    <object>objects\obj_empireSelector</object>
     <objects name="Events">
-      <object>objects\obj_eventController</object>
-      <object>objects\obj_events</object>
       <object>objects\obj_eventTower</object>
-      <object>objects\obj_eventMenu</object>
+      <object>objects\obj_eventTowerMenu</object>
+    </objects>
+    <objects name="Machines">
+      <object>objects\obj_drillShade</object>
+      <object>objects\obj_storage</object>
+      <object>objects\obj_drill</object>
+    </objects>
+    <objects name="Oxygen">
+      <object>objects\obj_buyOxygen</object>
+      <object>objects\obj_oxygenControl</object>
+      <object>objects\obj_oxygenTerminal</object>
+      <object>objects\obj_oxygenTerminalMenu</object>
+    </objects>
+    <objects name="Main menu">
+      <object>objects\obj_mainMenu</object>
+      <object>objects\obj_optionsController</object>
+    </objects>
+    <objects name="Recourses">
+      <object>objects\obj_valuable</object>
+      <object>objects\obj_mineral</object>
+      <object>objects\obj_fuel</object>
+      <object>objects\obj_mineralNode</object>
+      <object>objects\obj_valuableNode</object>
+      <object>objects\obj_fuelNode</object>
+    </objects>
+    <objects name="Sale terminal">
+      <object>objects\obj_sellMin</object>
+      <object>objects\obj_sellVal</object>
+      <object>objects\obj_sellFuel</object>
+      <object>objects\obj_terminalMenu</object>
+      <object>objects\obj_saleTerminal</object>
+    </objects>
+    <objects name="Empire">
+      <object>objects\obj_empireController</object>
+      <object>objects\obj_empire1Controller</object>
+      <object>objects\obj_empire2Controller</object>
+      <object>objects\obj_empire3Controller</object>
+      <object>objects\obj_empireSelector</object>
     </objects>
   </objects>
   <rooms name="rooms">
