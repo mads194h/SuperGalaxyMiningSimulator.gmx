@@ -38,6 +38,7 @@
       <sprite>sprites\spr_empireSelector</sprite>
       <sprite>sprites\spr_terminalMenu</sprite>
       <sprite>sprites\spr_saleTerm</sprite>
+      <sprite>sprites\spr_sellButton</sprite>
     </sprites>
     <sprites name="UI">
       <sprite>sprites\spr_UiBoks</sprite>
@@ -52,10 +53,14 @@
     </sprites>
     <sprites name="Main menu">
       <sprite>sprites\spr_menuArrow</sprite>
-      <sprite>sprites\spr_sellButton</sprite>
       <sprite>sprites\spr_buyButton</sprite>
       <sprite>sprites\spr_1280x720_button</sprite>
       <sprite>sprites\spr_1920x1080_button</sprite>
+    </sprites>
+    <sprites name="PlanetSelect">
+      <sprite>sprites\spr_planetSelect</sprite>
+      <sprite>sprites\spr_planetSelectMenu</sprite>
+      <sprite>sprites\spr_planetSelectButton</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -66,6 +71,7 @@
     <script>scripts\scr_menu.gml</script>
     <script>scripts\scr_resolution.gml</script>
     <script>scripts\scr_menuOptions.gml</script>
+    <script>scripts\scr_planetSelectMenu.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_menu</font>
@@ -117,11 +123,18 @@
       <object>objects\obj_empire3Controller</object>
       <object>objects\obj_empireSelector</object>
     </objects>
+    <objects name="PlanetSelect">
+      <object>objects\obj_planetSelectMenu</object>
+      <object>objects\obj_planetSelectTerminal</object>
+      <object>objects\obj_travelMenu</object>
+      <object>objects\obj_planetSelectButton</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_menu</room>
     <room>rooms\room1</room>
     <room>rooms\room_options</room>
+    <room>rooms\room_planetSelect</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
