@@ -68,6 +68,10 @@
     <instance objName="obj_sellFuel" x="-480" y="512" name="inst_B6DF31EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_oxygenControl" x="96" y="224" name="inst_46988BC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_empireSelector" x="-288" y="192" name="inst_0111256A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ovj_enemySpawn" x="-128" y="64" name="inst_CC88517C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ovj_enemySpawn" x="-96" y="1024" name="inst_1C0A3833" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ovj_enemySpawn" x="2048" y="992" name="inst_70C239BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ovj_enemySpawn" x="2016" y="-128" name="inst_D78ACCC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
