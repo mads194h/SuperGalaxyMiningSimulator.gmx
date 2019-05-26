@@ -73,6 +73,7 @@
     <script>scripts\scr_resolution.gml</script>
     <script>scripts\scr_menuOptions.gml</script>
     <script>scripts\scr_planetSelectMenu.gml</script>
+    <script>scripts\scr_inGameMenu.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_menu</font>
@@ -132,6 +133,9 @@
       <object>objects\obj_planetSelectTerminal</object>
       <object>objects\obj_travelMenu</object>
       <object>objects\obj_planetSelectButton</object>
+    </objects>
+    <objects name="InGameMenu">
+      <object>objects\obj_inGameMenuController</object>
     </objects>
   </objects>
   <rooms name="rooms">
