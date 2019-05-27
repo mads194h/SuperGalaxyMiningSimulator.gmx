@@ -63,6 +63,9 @@
       <sprite>sprites\spr_planetSelectMenu</sprite>
       <sprite>sprites\spr_planetSelectButton</sprite>
     </sprites>
+    <sprite>sprites\spr_turret</sprite>
+    <sprite>sprites\spr_turretStand</sprite>
+    <sprite>sprites\spr_bullet</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sand</background>
@@ -79,7 +82,6 @@
     <font>fonts\fnt_menu</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_enemy</object>
     <object>objects\obj_player</object>
     <object>objects\obj_control</object>
     <object>objects\obj_targetParent</object>
@@ -136,6 +138,12 @@
     </objects>
     <objects name="InGameMenu">
       <object>objects\obj_inGameMenuController</object>
+    </objects>
+    <objects name="Combat">
+      <object>objects\obj_enemy</object>
+      <object>objects\obj_turret</object>
+      <object>objects\obj_bullet</object>
+      <object>objects\obj_turretStand</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -94,6 +94,11 @@ if (global.CurrentSlot == 6)
     currentGhost = spr_planetSelect;
     currentPrice = "";
 }
+if (global.CurrentSlot == 7)
+{
+    currentGhost = spr_turret
+    currentPrice = "";
+}
 </string>
           </argument>
         </arguments>
@@ -139,6 +144,9 @@ if place_free(mouse_x, mouse_y) &amp;&amp; !place_meeting(mouse_x, mouse_y, obj_
 }
 if place_free(mouse_x, mouse_y) &amp;&amp; !place_meeting(mouse_x, mouse_y, obj_player) &amp;&amp; global.CurrentSlot == 6 &amp;&amp; !instance_exists(obj_eventTower){
     instance_create(mouse_x, mouse_y, obj_planetSelectTerminal)
+}
+if place_free(mouse_x, mouse_y) &amp;&amp; !place_meeting(mouse_x, mouse_y, obj_player) &amp;&amp; global.CurrentSlot == 7 &amp;&amp; !instance_exists(obj_eventTower){
+    instance_create(mouse_x, mouse_y, obj_turret)
 }
 </string>
           </argument>
