@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>myNode = instance_place(x,y, obj_nodeParent)
+            <string>hp = 10
+myNode = instance_place(x,y, obj_nodeParent)
 if place_meeting(x,y, myNode){
 if myNode.numOfStorages &lt; 5{
 myNode.numOfStorages += 1

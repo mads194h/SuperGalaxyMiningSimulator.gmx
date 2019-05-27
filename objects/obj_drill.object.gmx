@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = -y
+            <string>hp = 10
+depth = -y
 miningSpeed = 180
 myNode = instance_place(x, y, obj_nodeParent)
 if place_meeting(x,y, myNode){
