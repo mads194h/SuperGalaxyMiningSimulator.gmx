@@ -57,12 +57,6 @@
     <instance objName="obj_empire3Controller" x="-352" y="544" name="inst_C6A2D292" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_control" x="288" y="192" name="inst_FE9D9DC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_placementghost" x="256" y="352" name="inst_89BB12EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mineralNode" x="704" y="608" name="inst_B3E26B92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mineralNode" x="1088" y="480" name="inst_23F64C58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fuelNode" x="256" y="128" name="inst_7850FC1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fuelNode" x="1664" y="960" name="inst_72E69D53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_valuableNode" x="256" y="992" name="inst_5881B8B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_valuableNode" x="1664" y="96" name="inst_071A55C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sellMin" x="-448" y="288" name="inst_422B653B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sellVal" x="-448" y="384" name="inst_9FD471C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sellFuel" x="-480" y="512" name="inst_B6DF31EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
