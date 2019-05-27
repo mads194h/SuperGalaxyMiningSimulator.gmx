@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>if (instance_exists(obj_planetSelectMenu))
 {
-    x = obj_planetSelectMenu.x+50;
+    x = obj_planetSelectMenu.x;
     y = obj_planetSelectMenu.y-50;
 }
 else
