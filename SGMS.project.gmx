@@ -86,7 +86,7 @@
     <object>objects\obj_control</object>
     <object>objects\obj_targetParent</object>
     <object>objects\obj_toolbarOutline</object>
-    <object>objects\ovj_enemySpawn</object>
+    <object>objects\obj_enemySpawn</object>
     <object>objects\obj_placementghost</object>
     <object>objects\obj_nodeParent</object>
     <objects name="Events">
@@ -115,6 +115,7 @@
       <object>objects\obj_mineralNode</object>
       <object>objects\obj_valuableNode</object>
       <object>objects\obj_fuelNode</object>
+      <object>objects\obj_spawnNodes</object>
     </objects>
     <objects name="Sale terminal">
       <object>objects\obj_sellMin</object>
