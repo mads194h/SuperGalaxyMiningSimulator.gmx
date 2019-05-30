@@ -84,6 +84,7 @@ if (instance_exists(obj_enemy)){
     if canShoot == true{
     projectile = instance_create(x, y, obj_bullet)
     projectile.direction = direction
+    projectile.attacker = self
     canShoot = false
     alarm[0] = fireSpeed
     }
