@@ -25,25 +25,45 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var mineralNodeCount;
-var valuableNodeCount;
-var fuelNodeCount;
+            <string>var mineralNodeCount = 4;
+var valuableNodeCount = 2;
+var fuelNodeCount = 3;
+///mineral nodes
+do{
+randomize();
 
-for (mineralNodeCount = 0; mineralNodeCount &lt; 3; mineralNodeCount += 1)
+var xx = random(room_width);
+var yy = random(room_height);
+if (!place_meeting(xx, yy, obj_mineralNode || obj_valuableNode || obj_fuelNode))
 {
-    
-    alarm[0] = room_speed;
+    instance_create(xx, yy, obj_mineralNode)
 }
+}
+until (instance_number(obj_mineralNode) == mineralNodeCount)
+///valuable nodes
+do{
+randomize();
 
-for (valuableNodeCount = 0; valuableNodeCount &lt; 1; valuableNodeCount += 1)
+var xx = random(room_width);
+var yy = random(room_height);
+if (!place_meeting(xx, yy, obj_mineralNode || obj_valuableNode || obj_fuelNode))
 {
-    alarm[1] = room_speed;
+    instance_create(xx, yy, obj_valuableNode)
 }
+}
+until(instance_number(obj_valuableNode) == valuableNodeCount)
+///fuel nodes
+do{
+randomize();
 
-for (fuelNodeCount = 0; fuelNodeCount &lt; 2; fuelNodeCount += 1)
+var xx = random(room_width);
+var yy = random(room_height);
+if (!place_meeting(xx, yy, obj_mineralNode || obj_valuableNode || obj_fuelNode))
 {
-    alarm[2] = room_speed;
+    instance_create(xx, yy, obj_fuelNode)
 }
+}
+until(instance_number(obj_fuelNode) == fuelNodeCount)
 </string>
           </argument>
         </arguments>

@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///variables
-state = searching
+state = "searching"
 target = 0
 spd = 2
 hp = 10
@@ -80,15 +80,15 @@ attacker = 0
           <argument>
             <kind>1</kind>
             <string>///find tagert and move to it
-if state == searching{
+if state == "searching"{
 if lookForTarget = true{
 target = instance_nearest(x, y, obj_targetParent)
-state = chasing
+state = "chasing"
 }
 }
-if state == chasing {
+if state == "chasing" {
 if !instance_exists(target){
-state = searching
+state = "searching"
 }
 move_towards_point(target.x, target.y, spd)
 
@@ -97,14 +97,14 @@ if hp &lt; 1 {
 instance_destroy();
 }
 
-if state == attacked {
+if state == "attacked" {
 target = attacker
-state = chasingAttacker
+state = "chasingAttacker"
 }
 
-if state == chasingAttacker {
+if state == "chasingAttacker" {
 if !instance_exists(target) {
-state = searching
+state = "searching"
 }
 move_towards_point(target.x, target.y, spd)
 }

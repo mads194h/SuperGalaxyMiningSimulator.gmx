@@ -51,7 +51,7 @@ attacker = 0
             <kind>1</kind>
             <string>other.hp -= 3
 other.attacker = attacker
-other.state = attacked
+other.state = "attacked"
 instance_destroy()
 </string>
           </argument>
