@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = 100
+            <string>hp = global.machineHP*10
 </string>
           </argument>
         </arguments>
@@ -55,6 +55,7 @@
         instance_create(self.x, self.y-52, obj_terminalMenu)
     }
 }
+hp = global.machineHP*10
 </string>
           </argument>
         </arguments>

@@ -52,6 +52,10 @@
       <sprite>sprites\spr_eventTowerMenu</sprite>
       <sprite>sprites\spr_event</sprite>
     </sprites>
+    <sprites name="Upgrades">
+      <sprite>sprites\spr_upgradeBuy</sprite>
+      <sprite>sprites\spr_upgrade</sprite>
+    </sprites>
     <sprites name="Main menu">
       <sprite>sprites\spr_menuArrow</sprite>
       <sprite>sprites\spr_buyButton</sprite>
@@ -146,6 +150,8 @@
       <object>objects\obj_bullet</object>
       <object>objects\obj_turretStand</object>
     </objects>
+    <object>objects\obj_upgradeBuy</object>
+    <object>objects\obj_upgradeMenu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_menu</room>

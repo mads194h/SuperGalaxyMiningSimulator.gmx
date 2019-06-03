@@ -51,7 +51,13 @@ global.cycleTimer = 10;
 global.upkeepTotal = 0;
 global.eventString = "";
 global.escKey = 0;
+global.miningSpeed = 180;
+global.playerHP = 50;
+global.projectileSpeed = 5;
+global.turretRateOfFire = 120;
+global.machineHP = 10
 randomize();
+instance_create(200, 200, obj_player)
 </string>
           </argument>
         </arguments>
