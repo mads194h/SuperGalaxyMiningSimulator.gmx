@@ -49,7 +49,8 @@ topPosY = obj_upgradeMenu.y-145
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>topPosX = obj_upgradeMenu.x+78
+            <string>if instance_exists(obj_upgradeMenu){
+topPosX = obj_upgradeMenu.x+78
 topPosY = obj_upgradeMenu.y-145
 
 if instance_exists(obj_upgradeMenu){
@@ -75,7 +76,10 @@ y += 30
 if place_meeting(x+5, y+5, obj_upgradeBuy){
 y += 30
 }
-
+}
+else {
+instance_destroy()
+}
 </string>
           </argument>
         </arguments>
