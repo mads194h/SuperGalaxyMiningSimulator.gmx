@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create (x, y, obj_turretStand)
+            <string>instance_create (x, y, obj_turretStand);
 target = 0;
 fireSpeed = global.turretRateOfFire;
 canShoot = true;
-hp = global.machineHP
+hp = global.machineHP;
 </string>
           </argument>
         </arguments>
@@ -52,7 +52,7 @@ hp = global.machineHP
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>canShoot = true
+            <string>canShoot = true;
 </string>
           </argument>
         </arguments>
@@ -75,20 +75,26 @@ hp = global.machineHP
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_exists(obj_enemy)){
-target = instance_nearest(x, y, obj_enemy)
-image_angle = point_direction(x, y, target.x, target.y)
+            <string>if (instance_exists(obj_enemy))
+{
+    target = instance_nearest(x, y, obj_enemy);
+    image_angle = point_direction(x, y, target.x, target.y);
 }
+
 direction = image_angle;
-if (instance_exists(obj_enemy)){
-    if (distance_to_object(obj_enemy) &lt; 500){
-    if canShoot == true{
-    projectile = instance_create(x, y, obj_bullet)
-    projectile.direction = direction
-    projectile.attacker = self
-    canShoot = false
-    alarm[0] = fireSpeed
-    }
+
+if (instance_exists(obj_enemy))
+{
+    if (distance_to_object(obj_enemy) &lt; 500)
+    {
+        if (canShoot == true)
+        {
+            projectile = instance_create(x, y, obj_bullet);
+            projectile.direction = direction;
+            projectile.attacker = self;
+            canShoot = false;
+            alarm[0] = fireSpeed;
+        }
     }
 }
 fireSpeed = global.turretRateOfFire;

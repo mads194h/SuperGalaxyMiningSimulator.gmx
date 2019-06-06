@@ -48,11 +48,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_exists(obj_oxygenTerminalMenu)
+            <string>if (instance_exists(obj_oxygenTerminalMenu))
 {
     x = obj_oxygenTerminalMenu.x+74;
     y = obj_oxygenTerminalMenu.y-152;
 }
+
 else
 {
     x = -200;

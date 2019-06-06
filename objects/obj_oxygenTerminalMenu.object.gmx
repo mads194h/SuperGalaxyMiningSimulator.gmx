@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if point_distance(obj_oxygenTerminal.x, obj_oxygenTerminal.y, obj_player.x, obj_player.y) &gt; 150
+            <string>if (point_distance(obj_oxygenTerminal.x, obj_oxygenTerminal.y, obj_player.x, obj_player.y) &gt; 150)
 {
-instance_destroy(self)
+    instance_destroy(self);
 }
 </string>
           </argument>
@@ -52,9 +52,9 @@ instance_destroy(self)
           <argument>
             <kind>1</kind>
             <string>draw_self();
-draw_sprite(spr_oxygen, 0, self.x-108, self.y-142)
-draw_text_transformed(self.x-93, self.y-142, global.oxygen, 0.25, 0.25, 0)
-draw_text_transformed(self.x+10, self.y-142, global.oxygenPrice, 0.25, 0.25, 0)
+draw_sprite(spr_oxygen, 0, self.x-108, self.y-142);
+draw_text_transformed(self.x-93, self.y-142, global.oxygen, 0.25, 0.25, 0);
+draw_text_transformed(self.x+10, self.y-142, global.oxygenPrice, 0.25, 0.25, 0);
 </string>
           </argument>
         </arguments>

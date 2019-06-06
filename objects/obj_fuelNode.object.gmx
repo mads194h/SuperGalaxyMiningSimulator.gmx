@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ressource = "fuel"
-numOfDrills = 0
+            <string>ressource = "fuel";
+numOfDrills = 0;
 </string>
           </argument>
         </arguments>
@@ -49,11 +49,11 @@ numOfDrills = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>randomize()
-xx = random(room_width)
-yy = random(room_height)
-instance_create(xx, yy, obj_mineralNode)
-instance_destroy()
+            <string>randomize();
+xx = random(room_width);
+yy = random(room_height);
+instance_create(xx, yy, obj_mineralNode);
+instance_destroy();
 </string>
           </argument>
         </arguments>

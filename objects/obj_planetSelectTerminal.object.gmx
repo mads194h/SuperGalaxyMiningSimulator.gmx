@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if point_distance(obj_planetSelectTerminal.x, obj_planetSelectTerminal.y, obj_player.x, obj_player.y) &lt; 150
+            <string>if (point_distance(obj_planetSelectTerminal.x, obj_planetSelectTerminal.y, obj_player.x, obj_player.y) &lt; 150)
 {
-    if !instance_exists(obj_planetSelectMenu)
+    if (!instance_exists(obj_planetSelectMenu))
     {
-        instance_create(self.x, self.y-52, obj_planetSelectMenu)
+        instance_create(self.x, self.y-52, obj_planetSelectMenu);
     }
 }
 </string>

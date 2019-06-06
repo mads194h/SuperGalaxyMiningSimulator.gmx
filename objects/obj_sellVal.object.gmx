@@ -48,13 +48,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_exists(obj_terminalMenu){
-x = obj_terminalMenu.x+74
-y = obj_terminalMenu.y-116
+            <string>if (instance_exists(obj_terminalMenu))
+{
+    x = obj_terminalMenu.x+74
+    y = obj_terminalMenu.y-116
 }
-else{
-x = -200
-y = -200
+else
+{
+    x = -200
+    y = -200
 }
 </string>
           </argument>
@@ -81,18 +83,26 @@ y = -200
             <string>moneyToGet = global.valuableCount*global.valuablePrice;
 
 global.moneyCount += moneyToGet;
-if moneyToGet &gt; 0{
-global.valuableCount = 0;
-if global.currentEmpire.valPrice &gt;= global.valuableOriginalPrice * 0.5{
-global.currentEmpire.valPrice -=2
-global.currentEmpire.affinity += 1
-}
-if global.currentEmpire.minPrice &lt;= global.mineralOriginalPrice * 1.2{
-global.mcurrentEmpire.minPrice += 1
-}
-if global.currentEmpire.fuelPrice &lt;= global.fuelOriginalPrice * 1.2{
-global.currentEmpire.fuelPrice += 2
-}
+
+if (moneyToGet &gt; 0)
+{
+    global.valuableCount = 0;
+    
+    if (global.currentEmpire.valPrice &gt;= global.valuableOriginalPrice * 0.5)
+    {
+        global.currentEmpire.valPrice -=2;
+        global.currentEmpire.affinity += 1;
+    }
+    
+    if (global.currentEmpire.minPrice &lt;= global.mineralOriginalPrice * 1.2)
+    {
+        global.mcurrentEmpire.minPrice += 1;
+    }
+    
+    if (global.currentEmpire.fuelPrice &lt;= global.fuelOriginalPrice * 1.2)
+    {
+        global.currentEmpire.fuelPrice += 2;
+    }
 }
 </string>
           </argument>

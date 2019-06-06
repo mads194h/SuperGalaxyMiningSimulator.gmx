@@ -26,14 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>///variables
-state = "searching"
-target = 0
-spd = 2
-hp = 10
-damage = 1
-lookForTarget = true
-canAttack = true
-attacker = 0
+state = "searching";
+target = 0;
+spd = 2;
+hp = 10;
+damage = 1;
+lookForTarget = true;
+canAttack = true;
+attacker = 0;
 </string>
           </argument>
         </arguments>
@@ -56,7 +56,7 @@ attacker = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>canAttack = true
+            <string>canAttack = true;
 </string>
           </argument>
         </arguments>
@@ -80,33 +80,43 @@ attacker = 0
           <argument>
             <kind>1</kind>
             <string>///find tagert and move to it
-if state == "searching"{
-if lookForTarget = true{
-target = instance_nearest(x, y, obj_targetParent)
-state = "chasing"
-}
-}
-if state == "chasing" {
-if !instance_exists(target){
-state = "searching"
-}
-move_towards_point(target.x, target.y, spd)
 
-}
-if hp &lt; 1 {
-instance_destroy();
+if (state == "searching")
+{
+    if (lookForTarget = true)
+    {
+        target = instance_nearest(x, y, obj_targetParent);
+        state = "chasing";
+    }
 }
 
-if state == "attacked" {
-target = attacker
-state = "chasingAttacker"
+if (state == "chasing") 
+{
+    if (!instance_exists(target))
+    {
+        state = "searching";
+    }
+    move_towards_point(target.x, target.y, spd);
 }
 
-if state == "chasingAttacker" {
-if !instance_exists(target) {
-state = "searching"
+if (hp &lt; 1)
+{
+    instance_destroy();
 }
-move_towards_point(target.x, target.y, spd)
+
+if (state == "attacked")
+{
+    target = attacker;
+    state = "chasingAttacker";
+}
+
+if (state == "chasingAttacker")
+{
+    if (!instance_exists(target))
+    {
+        state = "searching";
+    }
+    move_towards_point(target.x, target.y, spd);
 }
 </string>
           </argument>
@@ -130,10 +140,11 @@ move_towards_point(target.x, target.y, spd)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if canAttack = true {
-other.hp -=2
-canAttack = false
-alarm[0] = 120
+            <string>if (canAttack = true)
+{
+    other.hp -= 2;
+    canAttack = false;
+    alarm[0] = 120;
 }
 </string>
           </argument>

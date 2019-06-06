@@ -70,7 +70,11 @@ if (move != 0)
 
 var push;
 push = max(keyboard_check_released(vk_enter), keyboard_check_released(vk_shift), keyboard_check_released(vk_space),0);
-if (push = 1) scr_menu(); ///calls a script, which takes care of what happens here
+
+if (push = 1)
+{
+    scr_menu(); ///calls a script, which takes care of what happens here
+}
 </string>
           </argument>
         </arguments>
@@ -101,7 +105,7 @@ draw_set_color(c_white);
 var m;
 for (m = 0; m &lt; array_length_1d(menu); m += 1)
 {
-    draw_text(x + space, y + (m * space), string(menu[m])) ///"m" is the specific string inside the array    
+    draw_text(x + space, y + (m * space), string(menu[m])); ///"m" is the specific string inside the array    
 }
 
 draw_sprite(spr_menuArrow, 0, x + 16, y + mpos * space);

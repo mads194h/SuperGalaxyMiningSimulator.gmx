@@ -26,12 +26,17 @@
           <argument>
             <kind>1</kind>
             <string>///variables
-alarm[0] = 60
+
+alarm[0] = 60;
+
 global.currentEmpire = obj_empire1Controller;
+
 xpos = window_get_width();
 ypos = window_get_height();
+
 OutlinePositionX = xpos/2-258;
 OutlinePositionY = ypos-40;
+
 global.CurrentSlot = 0;
 global.mineralCount = 0;
 global.valuableCount = 0;
@@ -55,9 +60,11 @@ global.miningSpeed = 180;
 global.playerHP = 50;
 global.projectileSpeed = 5;
 global.turretRateOfFire = 120;
-global.machineHP = 10
+global.machineHP = 10;
+
 randomize();
-instance_create(200, 200, obj_player)
+
+instance_create(200, 200, obj_player);
 </string>
           </argument>
         </arguments>
@@ -81,6 +88,7 @@ instance_create(200, 200, obj_player)
           <argument>
             <kind>1</kind>
             <string>///countdown on timer every second
+
 global.cycleTimer -= 1;
 alarm[0] = 60;
 </string>
@@ -106,63 +114,75 @@ alarm[0] = 60;
           <argument>
             <kind>1</kind>
             <string>///cycle end
-if global.cycleTimer &lt;= 0{
-randomize();
-global.moneyCount -= global.upkeepTotal;
-//event code start
-eventSelect = irandom_range(1, 5);
-empireSelect = irandom_range(1,3);
-eventEmpire = obj_empire1Controller;
-empireName = "";
 
-if (empireSelect == 1)
+if (global.cycleTimer &lt;= 0)
 {
+    randomize();
+    global.moneyCount -= global.upkeepTotal;
+
+    //event code start
+
+    eventSelect = irandom_range(1, 5);
+    empireSelect = irandom_range(1,3);
     eventEmpire = obj_empire1Controller;
-    empireName = "Danmark";
-}
-if (empireSelect == 2)
-{
-    eventEmpire = obj_empire2Controller;
-    empireName = "Fyn";
-}
-if (empireSelect == 3)
-{
-    eventEmpire = obj_empire3Controller;
-    empireName = "Jylland";
-}
+    empireName = "";
 
-if (eventSelect == 1)
-{
-    global.eventString = "No Event";
-    eventEmpire.minPrice = 5;
-    eventEmpire.valPrice = 100;
-    eventEmpire.fuelPrice = 20;
-}
-if (eventSelect == 2)
-{
-    global.eventString = empireName + " wants to expand... minerals sell for more";
-    eventEmpire.minPrice = 8;
-}
-if (eventSelect == 3)
-{
-    global.eventString = empireName + " is in war with another... minerals and fuel sell for more";
-    eventEmpire.minPrice = 8;
-    eventEmpire.fuelPrice = 23;
-}
-if (eventSelect == 4)
-{
-    global.eventString = empireName + " is mad at you for selling to another empire... minerals, valuable and fuel sell for less";
-    eventEmpire.minPrice = 2;
-    eventEmpire.valPrice = 60;
-    eventEmpire.fuelPrice = 15;
-}
-if (eventSelect == 5)
-{
-    global.eventString = empireName + " enters a golden age... valuable sell for more";
-    eventEmpire.valPrice = 140;
-}
-//event code end
-global.cycleTimer = 240;
+    if (empireSelect == 1)
+    {
+        eventEmpire = obj_empire1Controller;
+        empireName = "Danmark";
+    }
+
+    if (empireSelect == 2)
+    {
+        eventEmpire = obj_empire2Controller;
+        empireName = "Fyn";
+    }
+
+    if (empireSelect == 3)
+    {
+        eventEmpire = obj_empire3Controller;
+        empireName = "Jylland";
+    }
+
+    if (eventSelect == 1)
+    {
+        global.eventString = "No Event";
+        eventEmpire.minPrice = 5;
+        eventEmpire.valPrice = 100;
+        eventEmpire.fuelPrice = 20;
+    }
+
+    if (eventSelect == 2)
+    {
+        global.eventString = empireName + " wants to expand... minerals sell for more";
+        eventEmpire.minPrice = 8;
+    }
+
+    if (eventSelect == 3)
+    {
+        global.eventString = empireName + " is in war with another... minerals and fuel sell for more";
+        eventEmpire.minPrice = 8;
+        eventEmpire.fuelPrice = 23;
+    }
+
+    if (eventSelect == 4)
+    {
+        global.eventString = empireName + " is mad at you for selling to another empire... minerals, valuable and fuel sell for less";
+        eventEmpire.minPrice = 2;
+        eventEmpire.valPrice = 60;
+        eventEmpire.fuelPrice = 15;
+    }
+
+    if (eventSelect == 5)
+    {
+        global.eventString = empireName + " enters a golden age... valuable sell for more";
+        eventEmpire.valPrice = 140;
+    }
+
+    //event code end
+
+    global.cycleTimer = 240;
 }
 </string>
           </argument>
@@ -208,9 +228,10 @@ global.cycleTimer = 240;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if OutlinePositionX &lt; xpos/2+258{
-OutlinePositionX += 47;
-global.CurrentSlot += 1;
+            <string>if (OutlinePositionX &lt; xpos/2+258)
+{
+    OutlinePositionX += 47;
+    global.CurrentSlot += 1;
 }
 </string>
           </argument>
@@ -234,9 +255,10 @@ global.CurrentSlot += 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if OutlinePositionX &gt; xpos/2-258{
-OutlinePositionX -= 47;
-global.CurrentSlot -= 1;
+            <string>if (OutlinePositionX &gt; xpos/2-258)
+{
+    OutlinePositionX -= 47;
+    global.CurrentSlot -= 1;
 }
 </string>
           </argument>
@@ -260,31 +282,34 @@ global.CurrentSlot -= 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(spr_toolbar, 0, xpos/2, ypos-40)
-draw_sprite(spr_toolbaroutline, 0, OutlinePositionX, OutlinePositionY)
-draw_sprite(spr_drillIcon, 0, xpos/2-211, ypos-40)
-draw_sprite(spr_storage, 0, xpos/2-164, ypos-40)
-draw_sprite(spr_saleTerm, 0, xpos/2-117, ypos-40)
-draw_sprite(spr_oxygenTerminal, 0, xpos/2-70, ypos-40)
-draw_sprite(spr_eventTower, 0, xpos/2-22, ypos-40)
-draw_sprite(spr_planetSelect, 0, xpos/2+28, ypos-40)
-draw_sprite(spr_turret, 0,xpos/2+74, ypos-40)
-draw_sprite(spr_UiBoks, 0, 0, 10)
-draw_sprite(spr_UiBoks, 0, 196, 10)
-draw_sprite(spr_UiBoks, 0, 392, 10)
-draw_sprite(spr_UiBoks, 0, 588, 10)
-draw_sprite(spr_mineralUI, 0, 20, 20)
-draw_sprite(spr_fuelUI, 0, 216, 20)
-draw_sprite(spr_valuableUI, 0, 412, 20)
-draw_sprite(spr_MoneyUI, 0, 608, 20)
-draw_sprite(spr_oxygen, 0, 812, 20)
-draw_text(54, 20, global.mineralCount)
-draw_text(250, 20, global.fuelCount)
-draw_text(446, 20, global.valuableCount)
-draw_text(642, 20, global.moneyCount)
-draw_text(850, 20, global.oxygen)
-draw_text(1050, 20, global.cycleTimer)
-draw_text(1100, 20, global.upkeepTotal)
+            <string>//Toolbar &amp; Toolbar icons
+draw_sprite(spr_toolbar, 0, xpos/2, ypos-40);
+draw_sprite(spr_toolbaroutline, 0, OutlinePositionX, OutlinePositionY);
+draw_sprite(spr_drillIcon, 0, xpos/2-211, ypos-40);
+draw_sprite(spr_storage, 0, xpos/2-164, ypos-40);
+draw_sprite(spr_saleTerm, 0, xpos/2-117, ypos-40);
+draw_sprite(spr_oxygenTerminal, 0, xpos/2-70, ypos-40);
+draw_sprite(spr_eventTower, 0, xpos/2-22, ypos-40);
+draw_sprite(spr_planetSelect, 0, xpos/2+28, ypos-40);
+draw_sprite(spr_turret, 0,xpos/2+74, ypos-40);
+
+//UI at the top of screen
+draw_sprite(spr_UiBoks, 0, 0, 10);
+draw_sprite(spr_UiBoks, 0, 196, 10);
+draw_sprite(spr_UiBoks, 0, 392, 10);
+draw_sprite(spr_UiBoks, 0, 588, 10);
+draw_sprite(spr_mineralUI, 0, 20, 20);
+draw_sprite(spr_fuelUI, 0, 216, 20);
+draw_sprite(spr_valuableUI, 0, 412, 20);
+draw_sprite(spr_MoneyUI, 0, 608, 20);
+draw_sprite(spr_oxygen, 0, 812, 20);
+draw_text(54, 20, global.mineralCount);
+draw_text(250, 20, global.fuelCount);
+draw_text(446, 20, global.valuableCount);
+draw_text(642, 20, global.moneyCount);
+draw_text(850, 20, global.oxygen);
+draw_text(1050, 20, global.cycleTimer);
+draw_text(1100, 20, global.upkeepTotal);
 </string>
           </argument>
         </arguments>

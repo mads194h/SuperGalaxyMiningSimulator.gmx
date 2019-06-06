@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///variables
+
 hp = global.playerHP
 </string>
           </argument>
@@ -49,7 +50,9 @@ hp = global.playerHP
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spd=4;//Speed at which you move(2 is reccommended for RPG style games)
+            <string>///Player Movement
+
+spd=4;//Speed at which you move(2 is reccommended for RPG style games)
 rightbutton=ord("D");//Button you press to move to the right
 upbutton=ord("W");//Button you press to move up
 leftbutton=ord("A");//Button you press to move to the left
@@ -59,35 +62,39 @@ diag=1;//Make 1 or true for 8 direction movement, and 0 or true for 4 direction 
 //movement
 //The rest is pure code that makes you move. Feel free to modify!
 //The following moves the object according to a grid
+
 if (gridsnap)&amp;&amp;(place_snapped(gridsnapx,gridsnapy))
 {
-if keyboard_check(rightbutton){motion_set(0,spd);}
-if keyboard_check(upbutton){motion_set(90,spd);}
-if keyboard_check(leftbutton){motion_set(180,spd);}
-if keyboard_check(downbutton){motion_set(270,spd);}
-if !keyboard_check(rightbutton)
-if !keyboard_check(upbutton)
-if !keyboard_check(leftbutton)
-if !keyboard_check(downbutton){motion_set(direction,0);}
+    if keyboard_check(rightbutton){motion_set(0,spd);}
+    if keyboard_check(upbutton){motion_set(90,spd);}
+    if keyboard_check(leftbutton){motion_set(180,spd);}
+    if keyboard_check(downbutton){motion_set(270,spd);}
+    if !keyboard_check(rightbutton)
+    if !keyboard_check(upbutton)
+    if !keyboard_check(leftbutton)
+    if !keyboard_check(downbutton){motion_set(direction,0);}
 }
+
 //The following moves the object freely
 else if !(gridsnap)
 {
-if keyboard_check(rightbutton){motion_set(0,spd);}
-if keyboard_check(upbutton){motion_set(90,spd);}
-if keyboard_check(leftbutton){motion_set(180,spd);}
-if keyboard_check(downbutton){motion_set(270,spd);}
-if(diag)
-{
-if keyboard_check(rightbutton) &amp;&amp; keyboard_check(upbutton){motion_set(45,spd);}
-if keyboard_check(upbutton) &amp;&amp; keyboard_check(leftbutton){motion_set(135,spd);}
-if keyboard_check(leftbutton) &amp;&amp; keyboard_check(downbutton){motion_set(225,spd);}
-if keyboard_check(downbutton) &amp;&amp; keyboard_check(rightbutton){motion_set(315,spd);}
-}
-if !keyboard_check(rightbutton)
-if !keyboard_check(upbutton)
-if !keyboard_check(leftbutton)
-if !keyboard_check(downbutton){motion_set(direction,0);}
+    if keyboard_check(rightbutton){motion_set(0,spd);}
+    if keyboard_check(upbutton){motion_set(90,spd);}
+    if keyboard_check(leftbutton){motion_set(180,spd);}
+    if keyboard_check(downbutton){motion_set(270,spd);}
+    
+    if(diag)
+    {
+        if keyboard_check(rightbutton) &amp;&amp; keyboard_check(upbutton){motion_set(45,spd);}
+        if keyboard_check(upbutton) &amp;&amp; keyboard_check(leftbutton){motion_set(135,spd);}
+        if keyboard_check(leftbutton) &amp;&amp; keyboard_check(downbutton){motion_set(225,spd);}
+        if keyboard_check(downbutton) &amp;&amp; keyboard_check(rightbutton){motion_set(315,spd);}
+    }
+    
+    if !keyboard_check(rightbutton)
+    if !keyboard_check(upbutton)
+    if !keyboard_check(leftbutton)
+    if !keyboard_check(downbutton){motion_set(direction,0);}
 }
 x = floor(x)
 y = floor(y)
@@ -113,7 +120,9 @@ y = floor(y)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if hspeed!=0
+            <string>///Player Movement
+
+if hspeed!=0
 if !place_free(x+hspeed,y)
 {
     if hspeed&gt;0 move_contact_solid(0,hspeed)
@@ -176,8 +185,9 @@ direction = other.direction
           <argument>
             <kind>1</kind>
             <string>if !instance_exists(obj_upgradeMenu)
-instance_create(x, y, obj_upgradeMenu)
-
+{
+    instance_create(x, y, obj_upgradeMenu)
+}
 
 </string>
           </argument>

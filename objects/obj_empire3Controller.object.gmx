@@ -32,7 +32,9 @@ affinity = 0;
 affinityModifier = 1+(affinity/10);
 empireName = "Jylland";
 war = false;
-if war == true{
+
+if (war == true)
+{
 
 }
 </string>

@@ -31,7 +31,7 @@
 }
 else
 {
-    global.oxygen = 0
+    global.oxygen = 0;
     //her tilføjes hvad der skal ske hvis den rammer 0
 }
 

@@ -25,13 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>randomize()
-randomDir = random_range(0, 180)
-direction = randomDir
-spd = random_range(5, 10)
-speed = spd
-towardsSpeed = 1
-alarm[0] = 1
+            <string>randomize();
+randomDir = random_range(0, 180);
+direction = randomDir;
+spd = random_range(5, 10);
+speed = spd;
+towardsSpeed = 1;
+alarm[0] = 1;
 </string>
           </argument>
         </arguments>
@@ -54,8 +54,8 @@ alarm[0] = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>towardsSpeed += 1
-alarm[1] = 1
+            <string>towardsSpeed += 1;
+alarm[1] = 1;
 </string>
           </argument>
         </arguments>
@@ -78,12 +78,15 @@ alarm[1] = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if speed &gt; 0 {
-speed -= 1
-if speed &lt;= 0 {
-speed = 0
-}
-alarm[0] = 1
+            <string>if (speed &gt; 0)
+{
+    speed -= 1;
+    
+    if (speed &lt;= 0)
+    {
+        speed = 0;
+    }
+    alarm[0] = 1;
 }
 </string>
           </argument>
@@ -107,24 +110,28 @@ alarm[0] = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if distance_to_object(obj_player) &lt; 24{
-speed = 0
-move_towards_point(obj_player.x, obj_player.y, towardsSpeed)
-alarm[1] = 1
+            <string>if (distance_to_object(obj_player) &lt; 24)
+{
+    speed = 0;
+    move_towards_point(obj_player.x, obj_player.y, towardsSpeed);
+    alarm[1] = 1;
 }
 
-if instance_exists(obj_storage){
-var nearest = 0;
-nearest = instance_nearest(x, y, obj_storage);
-if  (nearest != id){
-    draw_line(x, y, obj_storage.x, obj_storage.y);
-}
+if (instance_exists(obj_storage))
+{
+    var nearest = 0;
+    nearest = instance_nearest(x, y, obj_storage);
+    if  (nearest != id)
+    {
+        draw_line(x, y, obj_storage.x, obj_storage.y);
+    }
 
-if distance_to_object(nearest) &lt; 200{
-speed = 0
-move_towards_point(nearest.x, nearest.y, towardsSpeed)
-alarm[1] = 1
-}
+    if (distance_to_object(nearest) &lt; 200)
+    {
+        speed = 0;
+        move_towards_point(nearest.x, nearest.y, towardsSpeed);
+        alarm[1] = 1;
+    }
 }
 </string>
           </argument>
@@ -147,20 +154,38 @@ alarm[1] = 1
           <argument>
             <kind>1</kind>
             <string>///collisions
-if hspeed!=0
-if !place_free(x+hspeed,y)
+if (hspeed != 0)
 {
-    if hspeed&gt;0 move_contact_solid(0,hspeed)
-    if hspeed&lt;0 move_contact_solid(180,-hspeed)
-    hspeed=0
+    if (!place_free(x+hspeed,y))
+    {
+        if (hspeed &gt; 0)
+        {
+            move_contact_solid(0,hspeed);
+        }
+        
+        if (hspeed &lt; 0)
+        {
+            move_contact_solid(180,-hspeed);
+        }
+        hspeed = 0;
+    }
 }
 
-if vspeed!=0
-if !place_free(x,y+vspeed)
+if (vspeed != 0)
 {
-    if vspeed&gt;0 move_contact_solid(270,vspeed)
-    if vspeed&lt;0 move_contact_solid(90,-vspeed)
-    vspeed=0
+    if !place_free(x,y+vspeed)
+    {
+        if (vspeed &gt; 0)
+        {
+            move_contact_solid(270,vspeed);
+        }
+        
+        if (vspeed &lt; 0)
+        {
+            move_contact_solid(90,-vspeed);
+        }
+        vspeed=0;
+    }
 }
 </string>
           </argument>
@@ -184,8 +209,8 @@ if !place_free(x,y+vspeed)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.fuelCount += 6
-instance_destroy(self)
+            <string>global.fuelCount += 6;
+instance_destroy(self);
 </string>
           </argument>
         </arguments>
@@ -208,8 +233,8 @@ instance_destroy(self)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.fuelCount += 6
-instance_destroy(self)
+            <string>global.fuelCount += 6;
+instance_destroy(self);
 </string>
           </argument>
         </arguments>

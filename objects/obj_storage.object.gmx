@@ -25,16 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = global.machineHP
-myNode = instance_place(x,y, obj_nodeParent)
-if place_meeting(x,y, myNode){
-if myNode.numOfStorages &lt; 5{
-myNode.numOfStorages += 1
-}
+            <string>hp = global.machineHP;
 
-else {
-instance_destroy(self)
-}
+myNode = instance_place(x,y, obj_nodeParent);
+
+if (place_meeting(x,y, myNode))
+{
+    if (myNode.numOfStorages &lt; 5)
+    {
+        myNode.numOfStorages += 1;
+    }
+
+    else 
+    {
+        instance_destroy(self);
+    }
 }
 
 
@@ -62,7 +67,7 @@ instance_destroy(self)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = global.machineHP
+            <string>hp = global.machineHP;
 </string>
           </argument>
         </arguments>

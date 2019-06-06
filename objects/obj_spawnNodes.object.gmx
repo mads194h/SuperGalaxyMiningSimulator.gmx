@@ -28,40 +28,48 @@
             <string>var mineralNodeCount = 4;
 var valuableNodeCount = 2;
 var fuelNodeCount = 3;
-///mineral nodes
-do{
-randomize();
 
-var xx = random(room_width);
-var yy = random(room_height);
-if (!place_meeting(xx, yy, obj_mineralNode || obj_valuableNode || obj_fuelNode))
+///mineral nodes
+do
 {
-    instance_create(xx, yy, obj_mineralNode)
-}
+    randomize();
+
+    var xx = random(room_width);
+    var yy = random(room_height);
+    
+    if (!place_meeting(xx, yy, obj_mineralNode || obj_valuableNode || obj_fuelNode))
+    {
+        instance_create(xx, yy, obj_mineralNode);
+    }
 }
 until (instance_number(obj_mineralNode) == mineralNodeCount)
-///valuable nodes
-do{
-randomize();
 
-var xx = random(room_width);
-var yy = random(room_height);
-if (!place_meeting(xx, yy, obj_mineralNode || obj_valuableNode || obj_fuelNode))
+///valuable nodes
+do
 {
-    instance_create(xx, yy, obj_valuableNode)
-}
+    randomize();
+
+    var xx = random(room_width);
+    var yy = random(room_height);
+    if (!place_meeting(xx, yy, obj_mineralNode || obj_valuableNode || obj_fuelNode))
+    {
+        instance_create(xx, yy, obj_valuableNode);
+    }
 }
 until(instance_number(obj_valuableNode) == valuableNodeCount)
-///fuel nodes
-do{
-randomize();
 
-var xx = random(room_width);
-var yy = random(room_height);
-if (!place_meeting(xx, yy, obj_mineralNode || obj_valuableNode || obj_fuelNode))
+///fuel nodes
+do
 {
-    instance_create(xx, yy, obj_fuelNode)
-}
+    randomize();
+
+    var xx = random(room_width);
+    var yy = random(room_height);
+    
+    if (!place_meeting(xx, yy, obj_mineralNode || obj_valuableNode || obj_fuelNode))
+    {
+        instance_create(xx, yy, obj_fuelNode);
+    }
 }
 until(instance_number(obj_fuelNode) == fuelNodeCount)
 </string>

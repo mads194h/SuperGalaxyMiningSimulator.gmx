@@ -25,13 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_exists(obj_terminalMenu){
-x = obj_terminalMenu.x+97
-y = obj_terminalMenu.y-46
+            <string>if (instance_exists(obj_terminalMenu))
+{
+    x = obj_terminalMenu.x+97
+    y = obj_terminalMenu.y-46
 }
-else{
-x = -200
-y = -200
+
+else
+{
+    x = -200
+    y = -200
 }
 </string>
           </argument>
@@ -55,16 +58,19 @@ y = -200
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.currentEmpire == obj_empire1Controller{
-global.currentEmpire = obj_empire2Controller
+            <string>if (global.currentEmpire == obj_empire1Controller)
+{
+    global.currentEmpire = obj_empire2Controller;
 }
 
-else if global.currentEmpire == obj_empire2Controller{
-global.currentEmpire = obj_empire3Controller
+else if (global.currentEmpire == obj_empire2Controller)
+{
+    global.currentEmpire = obj_empire3Controller;
 }
 
-else if global.currentEmpire == obj_empire3Controller{
-global.currentEmpire = obj_empire1Controller
+else if (global.currentEmpire == obj_empire3Controller)
+{
+    global.currentEmpire = obj_empire1Controller;
 }
 </string>
           </argument>

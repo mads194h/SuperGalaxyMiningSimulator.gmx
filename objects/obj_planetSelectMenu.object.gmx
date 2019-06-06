@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if point_distance(obj_planetSelectTerminal.x, obj_planetSelectTerminal.y, obj_player.x, obj_player.y) &gt; 150
+            <string>if (point_distance(obj_planetSelectTerminal.x, obj_planetSelectTerminal.y, obj_player.x, obj_player.y) &gt; 150)
 {
-instance_destroy(self)
+    instance_destroy(self);
 }
 </string>
           </argument>

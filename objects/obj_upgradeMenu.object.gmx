@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x, y, obj_upgradeBuy)
-instance_create(x, y+30, obj_upgradeBuy)
-instance_create(x, y+60, obj_upgradeBuy)
-instance_create(x, y+90, obj_upgradeBuy)
-instance_create(x, y+120, obj_upgradeBuy)
+            <string>instance_create(x, y, obj_upgradeBuy);
+instance_create(x, y+30, obj_upgradeBuy);
+instance_create(x, y+60, obj_upgradeBuy);
+instance_create(x, y+90, obj_upgradeBuy);
+instance_create(x, y+120, obj_upgradeBuy);
 </string>
           </argument>
         </arguments>
@@ -52,8 +52,8 @@ instance_create(x, y+120, obj_upgradeBuy)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y = (view_yview + view_hview * 0.5)
-x = (view_xview + view_wview * 0.5)-20
+            <string>y = (view_yview + view_hview * 0.5);
+x = (view_xview + view_wview * 0.5)-20;
 </string>
           </argument>
         </arguments>
@@ -76,7 +76,7 @@ x = (view_xview + view_wview * 0.5)-20
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy()
+            <string>instance_destroy();
 </string>
           </argument>
         </arguments>

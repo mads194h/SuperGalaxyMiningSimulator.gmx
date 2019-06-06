@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if point_distance(obj_saleTerminal.x, obj_saleTerminal.y, obj_player.x, obj_player.y) &gt; 150
+            <string>if (point_distance(obj_saleTerminal.x, obj_saleTerminal.y, obj_player.x, obj_player.y) &gt; 150)
 {
-instance_destroy(self)
+    instance_destroy(self);
 }
 </string>
           </argument>
@@ -51,17 +51,17 @@ instance_destroy(self)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self()
-draw_sprite(spr_mineral, 0, self.x-108, self.y-142)
-draw_sprite(spr_valuable, 0, self.x-108, self.y-106)
-draw_sprite(spr_fuel, 0, self.x-108, self.y-70)
-draw_text_transformed(self.x-93, self.y-142, global.mineralCount, 0.25, 0.25, 0)
-draw_text_transformed(self.x-93, self.y-106, global.valuableCount, 0.25, 0.25, 0)
-draw_text_transformed(self.x-93, self.y-70, global.fuelCount, 0.25, 0.25, 0)
-draw_text_transformed(self.x+10, self.y-142, global.currentEmpire.minPrice, 0.25, 0.25, 0)
-draw_text_transformed(self.x+10, self.y-106, global.currentEmpire.valPrice, 0.25, 0.25, 0)
-draw_text_transformed(self.x+10, self.y-70, global.currentEmpire.fuelPrice, 0.25, 0.25, 0)
-draw_text_transformed(self.x-43, self.y-39, global.currentEmpire.empireName, 0.25, 0.25, 0)
+            <string>draw_self();
+draw_sprite(spr_mineral, 0, self.x-108, self.y-142);
+draw_sprite(spr_valuable, 0, self.x-108, self.y-106);
+draw_sprite(spr_fuel, 0, self.x-108, self.y-70);
+draw_text_transformed(self.x-93, self.y-142, global.mineralCount, 0.25, 0.25, 0);
+draw_text_transformed(self.x-93, self.y-106, global.valuableCount, 0.25, 0.25, 0);
+draw_text_transformed(self.x-93, self.y-70, global.fuelCount, 0.25, 0.25, 0);
+draw_text_transformed(self.x+10, self.y-142, global.currentEmpire.minPrice, 0.25, 0.25, 0);
+draw_text_transformed(self.x+10, self.y-106, global.currentEmpire.valPrice, 0.25, 0.25, 0);
+draw_text_transformed(self.x+10, self.y-70, global.currentEmpire.fuelPrice, 0.25, 0.25, 0);
+draw_text_transformed(self.x-43, self.y-39, global.currentEmpire.empireName, 0.25, 0.25, 0);
 </string>
           </argument>
         </arguments>

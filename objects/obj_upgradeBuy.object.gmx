@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>topPosX = obj_upgradeMenu.x+78
-topPosY = obj_upgradeMenu.y-145
+            <string>topPosX = obj_upgradeMenu.x+78;
+topPosY = obj_upgradeMenu.y-145;
 </string>
           </argument>
         </arguments>
@@ -49,36 +49,45 @@ topPosY = obj_upgradeMenu.y-145
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_exists(obj_upgradeMenu){
-topPosX = obj_upgradeMenu.x+78
-topPosY = obj_upgradeMenu.y-145
+            <string>if (instance_exists(obj_upgradeMenu))
+{
+    topPosX = obj_upgradeMenu.x+78;
+    topPosY = obj_upgradeMenu.y-145;
 
-if instance_exists(obj_upgradeMenu){
-x = topPosX
-y = topPosY
-}
-else{
-instance_destroy()
+    if (instance_exists(obj_upgradeMenu))
+    {
+        x = topPosX;
+        y = topPosY;
+    }
+    else
+    {
+        instance_destroy();
+    }
+
+    if (place_meeting(x+5, y+5, obj_upgradeBuy))
+    {
+        y += 30;
+    }
+
+    if (place_meeting(x+5, y+5, obj_upgradeBuy))
+    {
+        y += 30;
+    }
+
+    if (place_meeting(x+5, y+5, obj_upgradeBuy))
+    {
+        y += 30;
+    }
+
+    if (place_meeting(x+5, y+5, obj_upgradeBuy))
+    {
+        y += 30;
+    }
 }
 
-if place_meeting(x+5, y+5, obj_upgradeBuy){
-y += 30
-}
-
-if place_meeting(x+5, y+5, obj_upgradeBuy){
-y += 30
-}
-
-if place_meeting(x+5, y+5, obj_upgradeBuy){
-y += 30
-}
-
-if place_meeting(x+5, y+5, obj_upgradeBuy){
-y += 30
-}
-}
-else {
-instance_destroy()
+else 
+{
+    instance_destroy();
 }
 </string>
           </argument>
@@ -102,24 +111,29 @@ instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if y == topPosY{
-global.miningSpeed *= 0.9
+            <string>if (y == topPosY)
+{
+    global.miningSpeed *= 0.9;
 }
 
-if y == topPosY+30{
-global.projectileSpeed *= 1.15
+if (y == topPosY+30)
+{
+    global.projectileSpeed *= 1.15;
 }
 
-if y == topPosY+60{
-global.turretRateOfFire *= 0.9
+if (y == topPosY+60)
+{
+    global.turretRateOfFire *= 0.9;
 }
 
-if y == topPosY+90{
-global.machineHP *= 1.2
+if (y == topPosY+90)
+{
+    global.machineHP *= 1.2;
 }
 
-if y == topPosY+120{
-global.playerHP *=1.25
+if (y == topPosY+120)
+{
+    global.playerHP *=1.25;
 }
 </string>
           </argument>
